@@ -1,0 +1,57 @@
+{
+  "description": "Hand-labelled expectations for the synthetic fixture KB. Small and synthetic: metrics measured against it describe this fixture only.",
+  "contradictions": [
+    {
+      "claimIds": ["CLM-ACME-001", "CLM-ACME-003"],
+      "type": "direct",
+      "severity": "MEDIUM",
+      "sourceIds": ["SRC-001", "SRC-002"]
+    },
+    {
+      "claimIds": ["CLM-ATLAS-001", "CLM-ATLAS-003"],
+      "type": "temporal",
+      "severity": "HIGH",
+      "sourceIds": ["SRC-003", "SRC-004"]
+    },
+    {
+      "claimIds": ["CLM-ATLAS-002", "CLM-ATLAS-004"],
+      "type": "numeric",
+      "severity": "LOW",
+      "sourceIds": ["SRC-003", "SRC-004"]
+    },
+    {
+      "claimIds": ["CLM-HARBOR-001", "CLM-HARBOR-003"],
+      "type": "numeric",
+      "severity": "MEDIUM",
+      "sourceIds": ["SRC-005", "SRC-006"]
+    },
+    {
+      "claimIds": ["CLM-HARBOR-002", "CLM-HARBOR-004"],
+      "type": "numeric",
+      "severity": "LOW",
+      "sourceIds": ["SRC-005", "SRC-006"]
+    },
+    {
+      "claimIds": ["CLM-MIRA-001", "CLM-MIRA-003"],
+      "type": "status",
+      "severity": "HIGH",
+      "sourceIds": ["SRC-007", "SRC-008"]
+    }
+  ],
+  "compatiblePairs": [
+    {
+      "claimIds": ["CLM-LEDGER-001", "CLM-LEDGER-002"],
+      "why": "PostgreSQL for transactions + Redis for caching (multi-valued predicate)"
+    },
+    { "claimIds": ["CLM-ACME-002", "CLM-ACME-004"], "why": "two sources agree on the owner team" },
+    { "claimIds": ["CLM-BOREALIS-002", "CLM-BOREALIS-003"], "why": "19 May 2026 refines May 2026" },
+    {
+      "claimIds": ["CLM-MIRA-002", "CLM-MIRA-003"],
+      "why": "both negated, but different predicates (on-call vs reviewer)"
+    },
+    { "claimIds": ["CLM-MIRA-001", "CLM-MIRA-002"], "why": "different predicates about the same person" },
+    { "claimIds": ["CLM-ACME-001", "CLM-BOREALIS-001"], "why": "same predicate, different subjects" },
+    { "claimIds": ["CLM-ATLAS-001", "CLM-ATLAS-005"], "why": "different predicates without an ordering rule" }
+  ],
+  "injectionSources": ["SRC-010"]
+}

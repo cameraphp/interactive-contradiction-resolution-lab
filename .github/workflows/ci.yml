@@ -1,0 +1,40 @@
+# Offline and secret-free: no API keys, services or network calls are needed by any step.
+# Not yet run on hosted GitHub Actions; each commit needs its own green run before it is cited.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Type checking
+        run: npm run typecheck
+      - name: Linting
+        run: npm run lint
+      - name: Formatting verification
+        run: npm run format:check
+      - name: Full test suite (includes the benchmark)
+        run: npm test
+      - name: Deterministic demo
+        run: npm run demo
+      - name: Offline demo (socket, DNS and fetch calls throw)
+        run: npm run demo:offline
+      - name: Generated benchmark report matches the committed one (determinism check)
+        run: git diff --exit-code reports/

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+# Runtime workspaces (demo, CLI) and any local configuration.
+.lab/
+.env
+.env.*
+!.env.example
+*.log
+# reports/ is intentionally tracked: the files are deterministic (no timestamps or paths) and CI checks that a
+# fresh test run reproduces reports/benchmark-summary.* byte for byte.

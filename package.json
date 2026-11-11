@@ -1,0 +1,38 @@
+{
+  "name": "interactive-contradiction-resolution-lab",
+  "version": "0.1.0",
+  "description": "Synthetic reference lab: deterministic contradiction detection, severity classification, human-approved diff-based resolution, hash-chained audit log and regression lint for a persistent LLM-maintained wiki. No API key, network or model required.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": "^22.13.0 || ^24.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json",
+    "lab": "tsx src/cli/lab.ts",
+    "demo": "tsx src/cli/demo.ts",
+    "demo:offline": "node --import ./tests/support/block-network.mjs --import tsx src/cli/demo.ts",
+    "benchmark": "tsx src/cli/benchmark.ts",
+    "experiment:context": "tsx src/cli/context-experiment.ts",
+    "verify": "npm run typecheck && npm run lint && npm run format:check && npm test"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "eslint": "10.14.0",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vitest": "5.0.5"
+  }
+}

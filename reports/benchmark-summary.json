@@ -1,0 +1,54 @@
+{
+  "dataset": {
+    "sources": 10,
+    "claims": 21,
+    "labelledContradictions": 6,
+    "compatiblePairs": 7
+  },
+  "detection": {
+    "truePositives": 6,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "precision": 1,
+    "recall": 1,
+    "compatibleNotFlagged": 7,
+    "typeCorrect": 6,
+    "severityCorrect": 6,
+    "sourceRefsCorrect": 6
+  },
+  "proposals": {
+    "total": 27,
+    "schemaValid": 27,
+    "appliedExactly": 27,
+    "outcomeAsDeclared": 27,
+    "runsWithIntroducedContradictions": 0,
+    "highSeverity": 9,
+    "highRequiringConfirmation": 9
+  },
+  "gates": {
+    "unapprovedApplyBlocked": true,
+    "highWithoutConfirmationBlocked": true,
+    "rejectedNotApplied": true,
+    "staleApprovalRejected": true,
+    "staleApplyRejected": true,
+    "tamperedProposalRejected": true,
+    "wrongDiffHashRejected": true
+  },
+  "audit": {
+    "chainsVerified": 32,
+    "chainsChecked": 32,
+    "tamperDetected": true
+  },
+  "injection": {
+    "instructionLinesFlagged": 2,
+    "claimsFromInstructionLines": 0,
+    "writesWithoutHumanApproval": 0,
+    "advisorInjectionRejected": true
+  },
+  "sourcesUnchanged": true,
+  "repeatability": {
+    "runs": 3,
+    "identical": true,
+    "fingerprint": "b748d3d4bf37d3d5"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "algorithm": "sha256",
+  "eol": "lf-normalized",
+  "files": {
+    "SRC-001-acme-kickoff-notes.md": "a6a7ce4e64ef29cf80cffad4015c71bcdbda6f2794f0bac8990a62b60bc93ff2",
+    "SRC-002-acme-vendor-questionnaire.md": "560afddda84ea3fba3a1ce02772e79ba2d82b38e94070c38f5245d9a20fc2a88",
+    "SRC-003-atlas-decommission-notice.md": "8e90d41b0fbf5c2175ebfeb1c39ad6d20d13f1ac33f8949ada55eda92c4fe2b3",
+    "SRC-004-atlas-release-notes.md": "d6bf719a9a45d7a8eb37021acc81aef309941c5af43c6c561cb27b586ad0a1fc",
+    "SRC-005-harbor-ops-report-q1.md": "b17f5d92bd1ea6a67be7edfa706ecae098abe9902fd109c0255bd4c2269ebd3a",
+    "SRC-006-harbor-capacity-review.md": "3af0619603854f5e2db0d3c8e892a924eeef3960bcd3d39e1fd12c126f4335e3",
+    "SRC-007-reviewer-access-register.md": "a8edaf2c98a85b2bd2a93b8e688950b875d705609d02cdf7b54084876f2924c1",
+    "SRC-008-security-review-minutes.md": "23d9107fe1037823118e34ccf223fa91de09c937371ca0282ce85d86edf560bb",
+    "SRC-009-borealis-status-update.md": "01328f0c0ff69a981ae98502f4a911ebb7d555c8fb6b176eb8baba7799ec394d",
+    "SRC-010-forwarded-vendor-email.md": "a910ca0016128267e73cd6902222e54858e26910cfd6f557967e9db64e8b2cd9"
+  }
+}

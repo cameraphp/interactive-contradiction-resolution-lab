@@ -1,0 +1,2 @@
+# Source fixtures are hash-pinned; force LF so a Windows checkout does not alter their bytes.
+* text=auto eol=lf
